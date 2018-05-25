@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+//        consumerProguardFiles 'lib-proguard-rules.txt'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // Sets the "debug" build variant as the default variant
+    // of the library that Gradle should publish.
+
+    defaultPublishConfig "debug"
+
+    // Tells Gradle to build all variants of the library. Note that this
+    // may increase build times because Gradle must build multiple AARs,
+    // instead of only one.
+    publishNonDefault true
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+}
