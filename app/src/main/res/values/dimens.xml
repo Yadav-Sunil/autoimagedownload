@@ -39,6 +39,7 @@
     <dimen name="banner_width">320dp</dimen>
     <dimen name="banner_height">50dp</dimen>
     <dimen name="dp_150">150dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
     <dimen name="dp3">3dp</dimen>
     <dimen name="dp5">5dp</dimen>
     <dimen name="dp70">70dp</dimen>

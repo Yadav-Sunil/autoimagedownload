@@ -24,7 +24,6 @@ public class DownloadImageHelper {
     static DownloadImageHelper instance;
 
     static {
-
         instance = new DownloadImageHelper();
     }
 
@@ -35,7 +34,7 @@ public class DownloadImageHelper {
 
     private void printLog(String msg) {
         if (BuildConfig.DEBUG && msg != null) {
-               Log.e("ImageDownload ", msg);
+            Log.e("ImageDownload ", msg);
         }
     }
 
@@ -56,7 +55,6 @@ public class DownloadImageHelper {
             Picasso.get().load(url).into(imageView);
             loadImageFromServer(imageView, url, filePath);
         }
-
     }
 
     public void loadImageFromServer(ImageView imageView, String url, String filePath) {
@@ -126,7 +124,7 @@ public class DownloadImageHelper {
 
             @Override
             public void onPrepareLoad(Drawable placeHolderDrawable) {
-//                imageView.setImageDrawable(placeHolderDrawable);
+                imageView.setImageDrawable(placeHolderDrawable);
             }
         };
         return target;
